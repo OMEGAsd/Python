@@ -1,0 +1,94 @@
+# Python-number-2
+
+#_#_#_# append() #_#_#_#
+
+```py
+L = [1 , 2 , 3 , 4 , 5]
+L.append(6)
+print(L) 
+```
+```
+[1 , 2 , 3 , 4 , 5 , 6]
+```
+
+اضافة عنصر في اخر القائمة
+
+
+#_#_#_# remove() #_#_#_#
+
+```py
+
+L = ["1" , "2" , "3" , "4" , "5"]
+L.remove("3")
+print(L)
+
+```
+```
+["1" , "2" , "4" , "5"]
+```
+حذف عنصر من القائمة
+
+
+#_#_#_# insert() #_#_#_#
+```py
+L = ["1" , "2" , "4" , "5"]
+L.insert(2, "3")
+print(L)
+```
+```
+["1" , "2" , "3" , "4" , "5"]
+```
+اضافة عنصر في القائمة في مكان محدد
+
+# Functions
+
+# Max 2
+```py
+def max2_v1(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+
+def max2_v2(a, b):
+    return max([a, b])
+```
+# Max 3
+```py
+def max3_v1(a, b, c):
+    if a > b:
+        if a > c:
+            return a
+        else:
+            return c
+    elif b > c:
+        return b
+    else:
+        return c
+
+
+def max3_v2(a, b, c):
+    max_a_b = max2_v1(a, b)
+    max_all = max2_v1(max_a_b, c)
+    return max_all
+
+
+def max3_v3(a, b, c):
+    return max([a, b, c])
+```
+# Max 4
+```py
+def max4_v1(a, b, c, d):
+    max_a_b = max2_v1(a, b)
+    max_c_d = max2_v1(c, d)
+    return max2_v1(max_a_b, max_c_d)
+
+def max4_v2(a, b, c, d):
+    max_a_b_c = max3_v1(a, b, c)
+    max_all = max2_v1(max_a_b_c, d)
+    return max_all
+
+def max4_v3(a,b,c,d):
+    return max([a,b,c,d])
+```
